@@ -1,6 +1,13 @@
 *
 !.gitignore
 !hypr/
-!hypr/**
+!hypr/hyprland.lua
+!hypr/gpu.lua
+!hypr/session-start.sh
+!hypr/effects.lua
+!hypr/stage1/
+!hypr/stage1/**
 !quickshell/
 !quickshell/**
+!foot/
+!foot/foot.ini

@@ -1,0 +1,19 @@
+Stage 1 recovery baseline
+Starting commit: 0d38940ab5996ef483ad1aa7857d8837a5c1a9e4
+Backup: /home/azhaar/.local/state/hypr-stage1/20261115-015834/config.tar.gz
+SHA256: 6db3ea9009bde58e7472c9e6199b3248cc601535c0a558b4e0b9efba5046fd68  config.tar.gz
+
+Backup verification: all 792 archive entries read; .git/HEAD present.
+Display: eDP-1, 1920x1200@144.00, scale 1 (kscreen-doctor).
+NVIDIA DRM modeset=Y; fbdev=Y.
+Original session: KDE Wayland.
+Full installed package inventory and display report are alongside the archive.
+
+hyprland 0.57.2-1
+foot 1.28.0-2
+firefox 160.0-1
+nvidia-open 615.78.08-6
+nvidia-utils 615.78.08-2
+mesa 1:26.2.6-1
+xdg-desktop-portal-hyprland 1.5.0-1
+polkit-kde-agent 6.8.2-1
