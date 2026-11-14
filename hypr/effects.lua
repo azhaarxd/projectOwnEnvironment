@@ -16,6 +16,13 @@ hl.config({
     },
 })
 hl.layer_rule({
+    name = "ukishima-pill-blur",
+    match = { namespace = "^ukishima$" },
+    blur = true,
+    blur_popups = true,
+    ignore_alpha = 0.15,
+})
+hl.layer_rule({
     name = "ukishima-dock-blur",
     match = { namespace = "^ukishima-dock$" },
     blur = true,

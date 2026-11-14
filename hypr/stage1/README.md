@@ -55,7 +55,7 @@ outputs are allowed by the second DRM device, but remain untested.
 Expected: Sonoma wallpaper, no bar/dock/settings shell, no config error overlay.
 Meta+T opens Foot; Meta+W opens Firefox; Meta+Q closes the active window;
 Meta+E opens Dolphin; Meta+S toggles fullscreen; Meta+F toggles floating.
-Ctrl+Meta+K/L/;/’ moves the active window left/up/down/right, respectively.
+Ctrl+Meta+K/L/;' moves the active window left/up/down/right, respectively.
 Super+1/2 switch workspaces; Super+Shift+1/2 move a window to the respective
 workspace. Super+left/right/up/down focuses a neighbor; Super+left/right mouse
 drag moves/resizes windows. US keyboard layout is preserved.
