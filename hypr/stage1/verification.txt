@@ -1,0 +1,33 @@
+$ Hyprland --verify-config -c /home/azhaar/.config/hypr/hyprland.lua
+exit=0
+DEBUG ]: [main] User-specified config location: '/home/azhaar/.config/hypr/hyprland.lua'
+DEBUG ]: [Config::initConfigManager] [cfg] Config is either explicit or special
+DEBUG ]: [Config::Lua::CConfigManager::postConfigReload] Disabling stdout logs (debug.enable_stdout_logs = 0). Further logs will be written to /hyprland.log
+ERR ]: [IPC::Socket2::CUnixImpl::CUnixImpl] [Socket2::UnixImpl] Couldn't bind the Hyprland Socket 2. (3) IPC will not work.
+
+
+======== Config parsing result:
+
+config ok
+
+$ foot --check-config -c /home/azhaar/.config/foot/foot.ini
+exit=0
+
+$ bash -n hypr/session-start.sh
+exit=0
+
+$ bash -n hypr/stage1/check.sh
+exit=0
+
+$ lua -e hl={env=function(k,v) print(k.."="..v) end}; dofile("hypr/gpu.lua")
+exit=0
+AQ_DRM_DEVICES=/dev/dri/card1:/dev/dri/card0
+
+$ git diff --check
+exit=0
+
+Backup SHA256 rechecked; original archive contains no Hyprland/Foot config to overwrite.
+Hardware/visual checks: pending. swaybg 1.2.2-1 installed through polkit authentication. Full static pre-login check script passed.
+SDDM enabled and active; native Hyprland entry present with start-hyprland executable.
+KDE autologin Relogin=false: logout should return to the greeter. SDDM not restarted.
+UWSM entry requires missing uwsm: use the normal Hyprland entry.

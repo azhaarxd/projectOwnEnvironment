@@ -1,0 +1,151 @@
+DEBUG ]: [main] User-specified config location: '/home/azhaar/.config/hypr/hyprland.lua'
+DEBUG ]: [Config::initConfigManager] [cfg] Config is either explicit or special
+DEBUG ]: [Config::Lua::CConfigManager::postConfigReload] Disabling stdout logs (debug.enable_stdout_logs = 0). Further logs will be written to /hyprland.log
+ERR ]: [IPC::Socket2::CUnixImpl::CUnixImpl] [Socket2::UnixImpl] Couldn't bind the Hyprland Socket 2. (3) IPC will not work.
+
+
+======== Config parsing result:
+
+config ok
+/usr/bin/swaybg
+swaybg 1.2.2-1
+
+Config errors (expected empty):
+
+
+
+Monitor (expected eDP-1 1920x1200 ~144 Hz, scale 1):
+Monitor eDP-1 (ID 0):
+	1920x1200@144.00200 at 0x0
+	description: China Star Optoelectronics Technology Co. Ltd MNG007QX2-2
+	make: China Star Optoelectronics Technology Co., Ltd
+	model: MNG007QX2-2
+	physical size (mm): 340x220
+	serial:
+	active workspace: 1 (1)
+	special workspace:  ()
+	reserved: 0 0 0 0
+	scale: 1
+	transform: 0
+	focused: yes
+	dpmsStatus: 1
+	vrr: false
+	solitary: 0
+	solitaryBlockedBy: windowed mode,missing candidate
+	activelyTearing: false
+	tearingBlockedBy: next frame is not torn,user settings,missing candidate
+	directScanoutTo: 0
+	directScanoutBlockedBy: user settings,software renders/cursors,missing candidate
+	disabled: false
+	currentFormat: XRGB8888
+	mirrorOf: none
+	availableModes: 1920x1200@144.00Hz 1920x1200@60.00Hz
+	colorManagementPreset: srgb
+	sdrBrightness: 1
+	sdrSaturation: 1
+	sdrMinLuminance: 0.2
+	sdrMaxLuminance: 80
+	hardwareCursorsInUse: false
+	hardwareDetails:
+		backend: drm
+		hdr: no
+		chroma: yes
+		bt2020: no
+		vrrCapable: yes
+
+
+
+Renderer (expected Intel/Mesa, inspect the OpenGL renderer):
+Hyprland 0.57.2 built from branch v0.57.2 at commit 11cbc6c577b84ffb1edf4df3fc5b6128c3ae6947 clean (VERSION: bump to 0.57.2).
+Date: Mon Nov 9 11:05:46 2026
+Tag: v0.57.2, commits: 8015
+
+Libraries:
+Hyprgraphics: built against 0.6.0, system has 0.6.0
+Hyprutils: built against 0.14.3, system has 0.14.3
+Hyprcursor: built against 0.1.13, system has 0.1.14
+Hyprlang: built against 0.6.8, system has 0.6.8
+Aquamarine: built against 0.16.0, system has 0.16.0
+
+Version ABI string: 11cbc6c577b84ffb1edf4df3fc5b6128c3ae6947_aq_0.16_hu_0.14_hg_0.6_hc_0.1_hlg_0.6
+no flags were set
+
+
+System Information:
+System name: Linux
+Node name: archlinux
+Release: 7.2.15-arch1-1
+Version: #1 SMP PREEMPT_DYNAMIC Tue, 03 Nov 2026 12:37:21 +0000
+
+Libraries:
+Hyprgraphics: built against 0.6.0, system has 0.6.0
+Hyprutils: built against 0.14.3, system has 0.14.3
+Hyprcursor: built against 0.1.13, system has 0.1.14
+Hyprlang: built against 0.6.8, system has 0.6.8
+Aquamarine: built against 0.16.0, system has 0.16.0
+
+
+
+GPU information:
+00:02.0 VGA compatible controller [0300]: Intel Corporation Raptor Lake-P [Intel Graphics] [8086:a7ab] (rev 04) (prog-if 00 [VGA controller])
+01:00.0 VGA compatible controller [0300]: NVIDIA Corporation AD107M [GeForce RTX 4050 Max-Q / Mobile] [10de:28a1] (rev a1) (prog-if 00 [VGA controller])
+NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  615.78.08  Release Build  (root@)
+
+
+os-release: NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinux.org/"
+DOCUMENTATION_URL="https://wiki.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+LOGO=archlinux-logo
+
+
+plugins:
+
+Explicit sync: supported
+GL ver: 3.2
+FP16: supported
+Backend: drm
+
+Monitor info:
+	Panel eDP-1: 1920x1200, eDP-1 China Star Optoelectronics Technology Co., Ltd MNG007QX2-2  -> backend drm
+		explicit ✔️
+		edid:
+			hdr ❌
+			chroma ✔️
+			bt2020 ❌
+		vrr capable ✔️
+		non-desktop ❌
+
+
+State:
+
+configProvider: lua
+backend: drm
+
+
+
+
+Background and motion blur values:
+bool: true
+set: true
+bool: true
+set: true
+
+Authentication agent and wallpaper:
+23803 swaybg -i /home/azhaar/Pictures/Wallpaper/macos-sonoma-6016x6016-11577.jpeg -m fill
+23872 /usr/lib/polkit-kde-authentication-agent-1
+
+Portals (expected active):
+active
+active
+
+Finish the visual tests in hypr/stage1/README.md; these cannot be inferred from config checks.
+
+Additional live evidence: compositor startup log reports /dev/dri/card1 primary DRM and Renderer: Mesa Intel(R) Graphics (RPL-P).
+Native Wayland Foot and Firefox clients are mapped. Only wallpaper layer is present; no bar/dock layers.
