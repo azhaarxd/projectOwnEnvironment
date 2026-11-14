@@ -22,6 +22,8 @@ hl.config({
 })
 dofile(dir .. "effects.lua")
 
+hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
+
 hl.bind("SUPER + T", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox"))
 hl.bind("SUPER + I", hl.dsp.exec_cmd("qs -p ~/.local/share/quickshell/ukishima ipc call ukishima agents \"\""))
@@ -43,6 +45,12 @@ hl.bind("CTRL + SUPER + K", hl.dsp.window.move({ direction = "left" }))
 hl.bind("CTRL + SUPER + L", hl.dsp.window.move({ direction = "up" }))
 hl.bind("CTRL + SUPER + SEMICOLON", hl.dsp.window.move({ direction = "down" }))
 hl.bind("CTRL + SUPER + APOSTROPHE", hl.dsp.window.move({ direction = "right" }))
+local tiling_templates = { "dwindle", "master" }
+local tiling_template_index = 1
+hl.bind("CTRL + SUPER + RETURN", function()
+    tiling_template_index = tiling_template_index % #tiling_templates + 1
+    hl.config({ general = { layout = tiling_templates[tiling_template_index] } })
+end)
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 

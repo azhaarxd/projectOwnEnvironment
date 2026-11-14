@@ -10,6 +10,8 @@ hl.config({
             contrast = 1.05,
             brightness = 1.0,
             vibrancy = 0.45,
+            ignore_opacity = true,
+            new_optimizations = true,
         },
         -- Enabled at user request; visual/performance acceptance is still pending.
         motion_blur = { enabled = true, samples = 8 },

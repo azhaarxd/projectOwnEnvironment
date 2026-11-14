@@ -13,6 +13,7 @@ passed based only on successful parsing.
 - [ ] Sonoma wallpaper appearance confirmed by user.
 - [x] Foot and Firefox running as native Wayland clients.
 - [ ] Meta+T / Meta+W, Meta+Q/E/S/F, and Ctrl+Meta+K/L/;/' shortcuts confirmed by user.
+- [ ] Four-finger horizontal workspace swipe and Ctrl+Meta+Enter Dwindle/Master cycle confirmed.
 - [x] eDP-1 1920x1200 at 144.002 Hz and scale 1 in Hyprland.
 - [x] Startup log: primary DRM card1, Renderer: Mesa Intel(R) Graphics (RPL-P).
 - [x] No live configuration errors; polkit agent and both portal services active.
