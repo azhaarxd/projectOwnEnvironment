@@ -1,0 +1,10 @@
+[Unit]
+Description=Ukishima awww wallpaper backend
+PartOf=ukishima.service
+StopWhenUnneeded=yes
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/awww-daemon
+Restart=on-failure
+RestartSec=2

@@ -1,0 +1,11 @@
+[Unit]
+Description=Shared CLI session state for Ukishima Agents
+PartOf=ukishima.service
+StopWhenUnneeded=yes
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/azhaar/.local/share/quickshell/ukishima/agents/broker.py
+Restart=on-failure
+RestartSec=2
+UMask=0077

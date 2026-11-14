@@ -1,0 +1,14 @@
+[Unit]
+Description=Ukishima Quickshell with native Agents card
+Requires=ukishima-agents.service
+Wants=ukishima-wallpaper.service
+After=ukishima-agents.service ukishima-wallpaper.service
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+Environment=PATH=/home/azhaar/.local/bin:/usr/local/bin:/usr/bin
+ExecCondition=/usr/bin/bash -c 'test -S "$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket.sock"'
+ExecStart=/home/azhaar/.local/share/quickshell/ukishima/launch.sh --no-duplicate
+Restart=on-failure
+RestartSec=3

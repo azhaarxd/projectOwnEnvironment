@@ -12,3 +12,8 @@
 !foot/
 !foot/foot.ini
 !README.md
+!systemd/
+!systemd/user/
+!systemd/user/ukishima.service
+!systemd/user/ukishima-agents.service
+!systemd/user/ukishima-wallpaper.service

@@ -15,6 +15,8 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT
 if ! systemctl --user restart xdg-desktop-portal-hyprland.service xdg-desktop-portal.service; then
     echo "Portal restart failed; inspect systemctl --user status xdg-desktop-portal.service"
 fi
+# Native Quickshell pill and shared CLI session broker.
+systemctl --user start ukishima.service || echo "Ukishima startup failed; inspect its user journal"
 # Reuse KDE's installed agent, without starting Plasma's shell.
 agent=/usr/lib/polkit-kde-authentication-agent-1
 if ! pgrep -u "$UID" -f "^$agent( |$)" >/dev/null; then

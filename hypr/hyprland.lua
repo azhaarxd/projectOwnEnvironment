@@ -24,6 +24,7 @@ dofile(dir .. "effects.lua")
 
 hl.bind("SUPER + T", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox"))
+hl.bind("SUPER + I", hl.dsp.exec_cmd("qs -p ~/.local/share/quickshell/ukishima ipc call ukishima agents \"\""))
 hl.bind("SUPER + SHIFT + Q", hl.dsp.window.close())
 -- Logs out immediately; save your work before pressing this shortcut.
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.exit())
