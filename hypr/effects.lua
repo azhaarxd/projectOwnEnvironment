@@ -42,6 +42,11 @@ hl.window_rule({
     match = { class = "^(org\\.kde\\.konsole|konsole)$" },
     opacity = "0.82 0.78",
 })
+hl.window_rule({
+    name = "thunar-blur-opacity",
+    match = { class = "^([Tt]hunar|[Oo]rg\\.xfce\\.Thunar)$" },
+    opacity = "0.88 0.84",
+})
 hl.curve("stage1Spring", { type = "spring", mass = 1, stiffness = 240, damping = 22 })
 hl.curve("stage1Fade", { type = "bezier", points = { {0.16, 1}, {0.3, 1} } })
 hl.animation({ leaf = "global", enabled = true, speed = 3, bezier = "stage1Fade" })

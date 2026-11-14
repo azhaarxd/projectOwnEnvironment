@@ -54,7 +54,7 @@ outputs are allowed by the second DRM device, but remain untested.
 
 Expected: Sonoma wallpaper, no bar/dock/settings shell, no config error overlay.
 Meta+T opens Foot; Meta+W opens Firefox; Meta+Q closes the active window;
-Meta+E opens Yazi; Meta+S toggles fullscreen; Meta+F toggles floating.
+Meta+E opens Thunar; Meta+S toggles fullscreen; Meta+F toggles floating.
 Alt+Space opens the app-search launcher from the dynamic island.
 Ctrl+Meta+K/L/;' moves the active window left/up/down/right, respectively.
 Four-finger horizontal swipes switch workspaces. Ctrl+Meta+Enter cycles the
@@ -269,7 +269,7 @@ dofile(dir .. "effects.lua")
 hl.bind("SUPER + T", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox"))
 hl.bind("SUPER + Q", hl.dsp.window.close())
-hl.bind("SUPER + E", hl.dsp.exec_cmd("foot -a yazi -e yazi"))
+hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + S", hl.dsp.window.fullscreen())
 hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 -- Logs out immediately; save your work before pressing this shortcut.

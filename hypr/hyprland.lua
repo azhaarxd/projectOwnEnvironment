@@ -29,7 +29,7 @@ hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox"))
 hl.bind("SUPER + I", hl.dsp.exec_cmd("qs -p ~/.local/share/quickshell/ukishima ipc call ukishima agents \"\""))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("qs -p ~/.local/share/quickshell/ukishima ipc call ukishima launcher \"\""))
 hl.bind("SUPER + Q", hl.dsp.window.close())
-hl.bind("SUPER + E", hl.dsp.exec_cmd("foot -a yazi -e yazi"))
+hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + S", hl.dsp.window.fullscreen())
 hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 -- Logs out immediately; save your work before pressing this shortcut.
