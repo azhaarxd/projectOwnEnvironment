@@ -37,6 +37,14 @@ hl.layer_rule({
     xray = true,
     ignore_alpha = 0.15,
 })
+hl.layer_rule({
+    name = "ukishima-overview-blur",
+    match = { namespace = "^ukishima-overview$" },
+    blur = true,
+    blur_popups = false,
+    xray = true,
+    ignore_alpha = 0.05,
+})
 hl.window_rule({
     name = "konsole-blur-opacity",
     match = { class = "^(org\\.kde\\.konsole|konsole)$" },
@@ -46,6 +54,11 @@ hl.window_rule({
     name = "thunar-blur-opacity",
     match = { class = "^([Tt]hunar|[Oo]rg\\.xfce\\.Thunar)$" },
     opacity = "0.88 0.84",
+})
+hl.window_rule({
+    name = "hypr-settings-blur",
+    match = { class = "^(hypr-settings|hypr_settings)$" },
+    opacity = "0.94 0.90",
 })
 hl.curve("stage1Spring", { type = "spring", mass = 1, stiffness = 240, damping = 22 })
 hl.curve("stage1Fade", { type = "bezier", points = { {0.16, 1}, {0.3, 1} } })
