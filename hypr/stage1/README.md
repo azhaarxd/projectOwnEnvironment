@@ -53,10 +53,12 @@ is available for applications that should render on NVIDIA. External NVIDIA
 outputs are allowed by the second DRM device, but remain untested.
 
 Expected: Sonoma wallpaper, no bar/dock/settings shell, no config error overlay.
-Meta+T opens Foot; Meta+W opens Firefox. US keyboard layout is preserved.
-Super+Shift+Q closes a window. Super+1/2 switch workspaces; Super+Shift+1/2 move
-a window to the respective workspace. Super+V toggles floating; Super+left/right/
-up/down focuses a neighbor; Super+left/right mouse drag moves/resizes windows.
+Meta+T opens Foot; Meta+W opens Firefox; Meta+Q closes the active window;
+Meta+E opens Dolphin; Meta+S toggles fullscreen; Meta+F toggles floating.
+Ctrl+Meta+K/L/;/’ moves the active window left/up/down/right, respectively.
+Super+1/2 switch workspaces; Super+Shift+1/2 move a window to the respective
+workspace. Super+left/right/up/down focuses a neighbor; Super+left/right mouse
+drag moves/resizes windows. US keyboard layout is preserved.
 **Super+Shift+Escape logs out immediately: save work first.**
 
 Inside Foot:
@@ -91,7 +93,7 @@ a complete configuration. Their visual acceptance is a separate gate below.
 
 Open two Foot windows. Move one to workspace 2 using Super+Shift+2, then switch
 with Super+1/2. Observe the sliding workspace bounce. Open/close a window and
-move/resize a floating window (Super+V, then Super+mouse drag) to check window
+move/resize a floating window (Super+F, then Super+mouse drag) to check window
 spring motion. Parameters: mass 1, stiffness 240, damping 22.
 
 Compare the same terminal over a detailed part of the wallpaper:
@@ -263,7 +265,10 @@ dofile(dir .. "effects.lua")
 
 hl.bind("SUPER + T", hl.dsp.exec_cmd("foot"))
 hl.bind("SUPER + W", hl.dsp.exec_cmd("firefox"))
-hl.bind("SUPER + SHIFT + Q", hl.dsp.window.close())
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + E", hl.dsp.exec_cmd("dolphin"))
+hl.bind("SUPER + S", hl.dsp.window.fullscreen())
+hl.bind("SUPER + F", hl.dsp.window.float({ action = "toggle" }))
 -- Logs out immediately; save your work before pressing this shortcut.
 hl.bind("SUPER + SHIFT + Escape", hl.dsp.exit())
 for i = 1, 2 do
@@ -274,7 +279,10 @@ hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + right", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + up", hl.dsp.focus({ direction = "up" }))
 hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }))
-hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("CTRL + SUPER + K", hl.dsp.window.move({ direction = "left" }))
+hl.bind("CTRL + SUPER + L", hl.dsp.window.move({ direction = "up" }))
+hl.bind("CTRL + SUPER + SEMICOLON", hl.dsp.window.move({ direction = "down" }))
+hl.bind("CTRL + SUPER + APOSTROPHE", hl.dsp.window.move({ direction = "right" }))
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
