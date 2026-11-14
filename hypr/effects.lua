@@ -2,6 +2,7 @@
 hl.config({
     animations = { enabled = true },
     decoration = {
+        shadow = { enabled = false },
         blur = {
             enabled = true,
             size = 4,
@@ -12,24 +13,34 @@ hl.config({
             vibrancy = 0.45,
             ignore_opacity = true,
             new_optimizations = true,
+            xray = true,
+            special = false,
+            popups = false,
         },
-        -- Enabled at user request; visual/performance acceptance is still pending.
-        motion_blur = { enabled = true, samples = 8 },
+        -- Disabled to eliminate 8-sample per-pixel shader overhead at 144Hz on iGPU.
+        motion_blur = { enabled = false, samples = 8 },
     },
 })
 hl.layer_rule({
     name = "ukishima-pill-blur",
     match = { namespace = "^ukishima$" },
     blur = true,
-    blur_popups = true,
+    blur_popups = false,
+    xray = true,
     ignore_alpha = 0.15,
 })
 hl.layer_rule({
     name = "ukishima-dock-blur",
     match = { namespace = "^ukishima-dock$" },
     blur = true,
-    blur_popups = true,
+    blur_popups = false,
+    xray = true,
     ignore_alpha = 0.15,
+})
+hl.window_rule({
+    name = "konsole-blur-opacity",
+    match = { class = "^(org\\.kde\\.konsole|konsole)$" },
+    opacity = "0.82 0.78",
 })
 hl.curve("stage1Spring", { type = "spring", mass = 1, stiffness = 240, damping = 22 })
 hl.curve("stage1Fade", { type = "bezier", points = { {0.16, 1}, {0.3, 1} } })
